@@ -1,0 +1,154 @@
+/* Reset de estilos básicos para uniformidad en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Fondo claro para resaltar el contenido */
+    color: #333;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto; /* Centramos el contenedor sin margen superior */
+    padding-top: 100px; /* Espacio superior para la barra de navegación fija */
+}
+
+/* Encabezado */
+header {
+    background-color: #1e3a8a; /* Azul oscuro */
+    color: #fff;
+    padding: 15px 0;    
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* Barra de navegación fija */
+nav {
+    background-color: #2563eb; /* Azul más claro */
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y enlaces */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+nav img {
+    height: 40px; /* Ajusta el tamaño del logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1d4ed8; /* Cambia a un azul más intenso */
+    border-radius: 5px;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Lista de cursos */
+.courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #e0f7fa; /* Fondo claro */
+    border: 1px solid #0288d1; /* Borde azul */
+    border-radius: 10px;
+    width: 30%;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #01579b; /* Azul fuerte */
+}
+
+/* Formularios */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 16px;
+    color: #444;
+}
+
+form input, form textarea, form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .courses-list {
+        flex-direction: column;
+    }
+
+    .course-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+}

@@ -1,107 +1,112 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-
-    <title>Web Cursos</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- las tres siguientes líneas son un truco para obtener elementos semánticos de HTML5 que funcionan en versiones de Internet Explorer antiguas -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos</title>
+    <link rel="stylesheet" href="styless.css"> <!-- Aquí enlazamos el archivo CSS -->
 </head>
-
 <body>
-    <!-- Aquí empieza el encabezado principal que se mantendrá en todas las páginas del sitio web -->
-
+    <!-- Encabezado de la página -->
     <header>
-        <h1>Encabezado</h1>
+        <h1>Gestión de Cursos</h1>
     </header>
 
+    <!-- Barra de navegación -->
     <nav>
+        <img src="imagenes/logo_ups.png" alt="Logo Universidad">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nuestro equipo</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#courses">Cursos</a></li>
+            <li><a href="#add-course">Agregar Curso</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
-
-        <!-- Un formulario de búsqueda es una forma no-lineal de hacer búsquedas en un sitio web. -->
-
-        <form>
-            <input type="search" name="q" placeholder="Buscar" />
-            <input type="submit" value="¡Vamos!" />
-        </form>
     </nav>
 
-    <!-- Aquí está el contenido principal de nuestra página -->
-    <main>
-        <!-- Contiene un artículo -->
-        <article>
-            <h2>Título del artículo</h2>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Sección de inicio -->
+        <section id="inicio">
+            <h2>Bienvenidos a la Gestión de Cursos</h2>
+            <p>En esta plataforma podrás ver la lista de cursos disponibles, agregar nuevos cursos y contactarte con nosotros.</p>
+        </section>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-                lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-                viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-                et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-                congue enim, ut porta lorem lacinia consectetur.
-            </p>
+        <!-- Sección de lista de cursos -->
+        <section id="courses">
+            <h2>Cursos Disponibles</h2>
+            <div class="courses-list">
+                <!-- Ejemplo de tarjeta de curso (serán agregadas dinámicamente con JavaScript) -->
+                <div class="course-card">
+                    <h3>Curso de Programacion y Plataformas Web </h3>
+                    <p>Instructor: Cristian Timbi</p>
+                    <p>Inicio: 12/09/2024</p>
+                    <p>Duración: 64 semanas</p>
+                    <button class="btn">Ver más detalles</button>
+                    <p class="course-details" style="display:none;">
+                        Aprenderás los fundamentos de la programación con ejercicios prácticos y proyectos.
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h3>Curso de Inteligencia Artificial(IA)</h3>
+                    <p>Instructor: Remigio Hurtado</p>
+                    <p>Inicio: 12/09/2024</p>
+                    <p>Duración: 64 semanas</p>
+                    <button class="btn">Ver más detalles</button>
+                    <p class="course-details" style="display:none;">
+                        Explora el diseño web moderno utilizando HTML5, CSS3 y herramientas de diseño gráfico.
+                    </p>
+                </div>
+                <!-- Aquí se agregarán más cursos dinámicamente -->
+            </div>
+        </section>
 
-            <h3>Subsección</h3>
+        <!-- Sección de agregar curso -->
+        <section id="add-course">
+            <h2>Agregar Nuevo Curso</h2>
+            <form id="course-form">
+                <div>
+                    <label for="course-name">Nombre del Curso:</label><br>
+                    <input type="text" id="course-name" name="course-name" required>
+                </div>
+                
+                <div>
+                    <label for="instructor-name">Nombre del Instructor:</label><br>
+                    <input type="text" id="instructor-name" name="instructor-name" required>
+                </div>
+                
+                <div>
+                    <label for="start-date">Fecha de Inicio:</label><br>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                
+                <div>
+                    <label for="duration">Duración (en semanas):</label><br>
+                    <input type="number" id="duration" name="duration" required>
+                </div>
+                
+                <div>
+                    <label for="description">Descripción:</label><br>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Agregar Curso</button>
+            </form>
+        </section>
 
-            <p>
-                Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-                Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-            </p>
+        <!-- Sección de contacto -->
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Nombre: Andres Morocho</p>
+            <p>Email: morochoandres12@gmail.com</p>
+            <p>Teléfono: 0993650209</p>
+        </section>
+    </div>
 
-            <p>
-                Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-                dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-                Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-            </p>
-
-            <h3>Otra subsección</h3>
-
-            <p>
-                Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-                soclis natoque penatibus et manis dis parturient montes, nascetur
-                ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-                facilisis semper ac in est.
-            </p>
-
-            <p>
-                Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-                tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-                ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-                diam iaculis velit, is fringille sem nunc vet mi.
-            </p>
-        </article>
-
-        <!-- el contenido aparte también se puede anidar dentro del contenido principal -->
-        <aside>
-            <h2>Relacionado</h2>
-
-            <ul>
-                <li><a href="#">Oh, me gusta estar junto al mar</a></li>
-                <li><a href="#">Oh, me gusta estar junto al mar</a></li>
-                <li><a href="#">Aunque en el norte de Inglaterra</a></li>
-                <li><a href="#">Nunca deja de llover</a></li>
-                <li><a href="#">Oh, bueno...</a></li>
-            </ul>
-        </aside>
-    </main>
-
-    <!-- Y aquí está nuestro pie de página principal que se utiliza en todas las páginas de nuestro sitio web -->
-
+    <!-- Pie de página -->
     <footer>
-        <p>©Copyright 2050 de nadie. Todos los derechos revertidos.</p>
+        <p>&copy; 2024 Gestión de Cursos. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+    <script src="file.js"></script> <!-- Aquí enlazamos  el archivo JavaScript -->
+</body>
 </html>
