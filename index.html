@@ -1,112 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Cursos</title>
-    <link rel="stylesheet" href="styless.css"> <!-- Aquí enlazamos el archivo CSS -->
+    <title>Inicio - Gestión de Cursos</title>
+    <link rel="stylesheet" href="styless.css">
 </head>
+
 <body>
-    <!-- Encabezado de la página -->
+    <!-- Encabezado (barra de navegación) -->
     <header>
-        <h1>Gestión de Cursos</h1>
+        <nav>
+            <img src="imagenes/logo_ups.png" alt="Logo Universidad">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="agregar-curso.html">Agregar Curso</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Barra de navegación -->
-    <nav>
-        <img src="imagenes/logo_ups.png" alt="Logo Universidad">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#courses">Cursos</a></li>
-            <li><a href="#add-course">Agregar Curso</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Sección de inicio -->
+    <!-- Contenido de la página de inicio -->
+    <main>
         <section id="inicio">
-            <h2>Bienvenidos a la Gestión de Cursos</h2>
-            <p>En esta plataforma podrás ver la lista de cursos disponibles, agregar nuevos cursos y contactarte con nosotros.</p>
+            <h1>Bienvenido a la Plataforma de Gestión de Cursos</h1>
+            <p>Gestiona tus cursos, mantente organizado y mejora tu productividad con nuestra plataforma intuitiva y
+                fácil de usar.</p>
         </section>
 
-        <!-- Sección de lista de cursos -->
-        <section id="courses">
-            <h2>Cursos Disponibles</h2>
-            <div class="courses-list">
-                <!-- Ejemplo de tarjeta de curso (serán agregadas dinámicamente con JavaScript) -->
-                <div class="course-card">
-                    <h3>Curso de Programacion y Plataformas Web </h3>
-                    <p>Instructor: Cristian Timbi</p>
-                    <p>Inicio: 12/09/2024</p>
-                    <p>Duración: 64 semanas</p>
-                    <button class="btn">Ver más detalles</button>
-                    <p class="course-details" style="display:none;">
-                        Aprenderás los fundamentos de la programación con ejercicios prácticos y proyectos.
-                    </p>
-                </div>
-                <div class="course-card">
-                    <h3>Curso de Inteligencia Artificial(IA)</h3>
-                    <p>Instructor: Remigio Hurtado</p>
-                    <p>Inicio: 12/09/2024</p>
-                    <p>Duración: 64 semanas</p>
-                    <button class="btn">Ver más detalles</button>
-                    <p class="course-details" style="display:none;">
-                        Explora el diseño web moderno utilizando HTML5, CSS3 y herramientas de diseño gráfico.
-                    </p>
-                </div>
-                <!-- Aquí se agregarán más cursos dinámicamente -->
+        <section class="features">
+            <h2>¿Qué puedes hacer en esta plataforma?</h2>
+            <div class="feature">
+                <h3>Ver todos los cursos</h3>
+                <p>Revisa la lista completa de cursos disponibles con toda la información que necesitas.</p>
+            </div>
+            <div class="feature">
+                <h3>Añadir nuevos cursos</h3>
+                <p>Registra y organiza tus propios cursos con un formulario intuitivo.</p>
+            </div>
+            <div class="feature">
+                <h3>Contáctanos</h3>
+                <p>¿Tienes alguna duda o sugerencia? No dudes en comunicarte con nosotros.</p>
             </div>
         </section>
-
-        <!-- Sección de agregar curso -->
-        <section id="add-course">
-            <h2>Agregar Nuevo Curso</h2>
-            <form id="course-form">
-                <div>
-                    <label for="course-name">Nombre del Curso:</label><br>
-                    <input type="text" id="course-name" name="course-name" required>
-                </div>
-                
-                <div>
-                    <label for="instructor-name">Nombre del Instructor:</label><br>
-                    <input type="text" id="instructor-name" name="instructor-name" required>
-                </div>
-                
-                <div>
-                    <label for="start-date">Fecha de Inicio:</label><br>
-                    <input type="date" id="start-date" name="start-date" required>
-                </div>
-                
-                <div>
-                    <label for="duration">Duración (en semanas):</label><br>
-                    <input type="number" id="duration" name="duration" required>
-                </div>
-                
-                <div>
-                    <label for="description">Descripción:</label><br>
-                    <textarea id="description" name="description" rows="4" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn">Agregar Curso</button>
-            </form>
-        </section>
-
-        <!-- Sección de contacto -->
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>Nombre: Andres Morocho</p>
-            <p>Email: morochoandres12@gmail.com</p>
-            <p>Teléfono: 0993650209</p>
-        </section>
-    </div>
+    </main>
 
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Gestión de Cursos. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="file.js"></script> <!-- Aquí enlazamos  el archivo JavaScript -->
+    
 </body>
+
 </html>

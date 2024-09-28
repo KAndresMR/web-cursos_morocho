@@ -9,44 +9,54 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Fondo claro para resaltar el contenido */
+    background-color: #f0f0f0;
+    /* Fondo claro para resaltar el contenido */
     color: #333;
 }
 
 /* Estilo del contenedor principal */
 .container {
     width: 80%;
-    margin: 0 auto; /* Centramos el contenedor sin margen superior */
-    padding-top: 100px; /* Espacio superior para la barra de navegación fija */
+    margin: 0 auto;
+    /* Centramos el contenedor sin margen superior */
+    padding-top: 100px;
+    /* Espacio superior para la barra de navegación fija */
 }
 
 /* Encabezado */
 header {
-    background-color: #1e3a8a; /* Azul oscuro */
+    background-color: #1e3a8a;
+    /* Azul oscuro */
     color: #fff;
-    padding: 15px 0;    
+    padding: 15px 0;
     padding-top: 100px;
     text-align: center;
 }
 
 /* Barra de navegación fija */
 nav {
-    background-color: #2563eb; /* Azul más claro */
+    background-color: #2563eb;
+    /* Azul más claro */
     color: #fff;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y enlaces */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px 20px; /* Espaciado interno */
+    justify-content: space-between;
+    /* Espacio entre logo y enlaces */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    /* Espaciado interno */
 }
 
 nav img {
-    height: 40px; /* Ajusta el tamaño del logo */
+    height: 40px;
+    /* Ajusta el tamaño del logo */
 }
 
 nav ul {
@@ -69,7 +79,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #1d4ed8; /* Cambia a un azul más intenso */
+    background-color: #1d4ed8;
+    /* Cambia a un azul más intenso */
     border-radius: 5px;
 }
 
@@ -90,8 +101,10 @@ section {
 }
 
 .course-card {
-    background-color: #e0f7fa; /* Fondo claro */
-    border: 1px solid #0288d1; /* Borde azul */
+    background-color: #e0f7fa;
+    /* Fondo claro */
+    border: 1px solid #0288d1;
+    /* Borde azul */
     border-radius: 10px;
     width: 30%;
     padding: 15px;
@@ -101,7 +114,8 @@ section {
 .course-card h3 {
     margin-bottom: 10px;
     font-size: 20px;
-    color: #01579b; /* Azul fuerte */
+    color: #01579b;
+    /* Azul fuerte */
 }
 
 /* Formularios */
@@ -120,11 +134,123 @@ form label {
     color: #444;
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+/* Estilo para botones */
+button {
+    background-color: #4caf50;
+    /* Verde */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Un tono de verde más oscuro */
+    transform: scale(1.05);
+    /* Efecto de aumento */
+}
+
+/* Estilo específico para botones de detalles */
+.details-button {
+    background-color: #2196f3;
+    /* Azul */
+}
+
+.details-button:hover {
+    background-color: #1976d2;
+    /* Un tono de azul más oscuro */
+}
+
+/* Estilo para el botón de agregar curso */
+#add-course-form button {
+    background-color: #ff9800;
+    /* Naranja */
+}
+
+#add-course-form button:hover {
+    background-color: #fb8c00;
+    /* Un tono de naranja más oscuro */
+}
+
+
+
+/* Estilos para inputs */
+input,
+textarea,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    /* Borde por defecto */
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre inputs */
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: #2563eb;
+    /* Azul más claro al pasar el mouse */
+}
+
+/* Color estable al hacer clic */
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #e3f2fd;
+    /* Color claro al enfocar */
+    border-color: #1e3a8a;
+    /* Azul oscuro al enfocar */
+}
+
+/* Animación de temblor */
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-1px, 0);
+    }
+
+    50% {
+        transform: translate(1px, 0);
+    }
+
+    75% {
+        transform: translate(-1px, 0);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Efecto de temblor cuando se aplica la clase */
+.shake {
+    animation: shake 0.5s ease forwards;
+    /* Efecto de temblor al escribir */
+}
+
+/* Para inputs vacíos después de haber sido enfocados */
+input:invalid,
+textarea:invalid {
+    border-color: #ff5722;
+    /* Color de advertencia si está vacío */
 }
 
 /* Pie de página */
@@ -138,7 +264,8 @@ footer {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .courses-list {
-        flex-direction: column;
+        flex-direction: row;
+
     }
 
     .course-card {
