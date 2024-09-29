@@ -7,214 +7,208 @@
 
 /* Estilo general del cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    /* Fondo claro para resaltar el contenido */
-    color: #333;
+    font-family: 'Arial', sans-serif;  /* Establece la fuente */
+    line-height: 1.6;  /* Mejora la legibilidad */
+    background-color: #f0f0f0;  /* Fondo claro */
+    color: #333;  /* Color de texto oscuro */
 }
 
 /* Estilo del contenedor principal */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    /* Centramos el contenedor sin margen superior */
-    padding-top: 100px;
-    /* Espacio superior para la barra de navegación fija */
+    width: 80%;  /* Ancho del contenedor */
+    margin: 0 auto;  /* Centra el contenedor */
+    padding-top: 100px;  /* Espacio superior para la barra de navegación fija */
 }
 
 /* Encabezado */
 header {
-    background-color: #1e3a8a;
-    /* Azul oscuro */
-    color: #fff;
+    
+    background-color: #1e3a8a;  /* Azul oscuro */
+    color: #fff;  /* Texto blanco */
     padding: 15px 0;
-    padding-top: 100px;
-    text-align: center;
+    padding-top: 100px;  /* Compensa la altura de la barra de navegación */
+    text-align: center;  /* Centra el texto */
 }
 
 /* Barra de navegación fija */
 nav {
-    background-color: #2563eb;
-    /* Azul más claro */
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    width: 100%;
+    background-image: linear-gradient(135deg, #ffffff, #1239a5);  /* Degradado de color */
+    color: #fff;  /* Texto blanco */
+    text-align: center;  /* Centra el texto */
+    position: fixed;  /* Fija la barra al inicio de la página */
+    width: 100%;  /* Barra de navegación de ancho completo */
     top: 0;
     left: 0;
-    z-index: 1000;
-    /* Asegura que esté por encima de otros elementos */
-    display: flex;
-    justify-content: space-between;
-    /* Espacio entre logo y enlaces */
-    align-items: center;
-    /* Centra verticalmente los elementos */
-    padding: 10px 20px;
-    /* Espaciado interno */
+    z-index: 1000;  /* Asegura que esté por encima de otros elementos */
+    display: flex;  /* Usamos flexbox para los elementos */
+    justify-content: space-between;  /* Espacio entre el logo y los enlaces */
+    align-items: center;  /* Centra los elementos verticalmente */
+    padding: 10px 20px;  /* Espaciado interno */
 }
 
 nav img {
-    height: 40px;
-    /* Ajusta el tamaño del logo */
+    height: 40px;  /* Ajusta el tamaño del logo */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none;  /* Elimina los puntos de la lista */
+    display: flex;  /* Organiza los enlaces en una fila */
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px;  /* Espaciado entre los elementos de la lista */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    color: #fff;  /* Enlaces en blanco */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    font-size: 18px;  /* Tamaño de texto para los enlaces */
+    padding: 10px 20px;  /* Espaciado interno de los enlaces */
+    display: inline-block;  /* Asegura que se comporten como bloques */
+    transition: background-color 0.3s ease;  /* Transición suave al cambiar el color de fondo */
 }
 
 nav ul li a:hover {
-    background-color: #1d4ed8;
-    /* Cambia a un azul más intenso */
-    border-radius: 5px;
+    background-color: #1d4ed8;  /* Cambia a un azul más intenso en hover */
+    border-radius: 5px;  /* Borde redondeado */
 }
 
 /* Secciones */
 section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    margin-bottom: 30px;  /* Espacio inferior */
+    padding: 20px;  /* Espaciado interno */
+    background-color: #ffffff;  /* Fondo blanco */
+    border: 1px solid #ddd;  /* Borde suave */
+    border-radius: 10px;  /* Bordes redondeados */
 }
 
 /* Lista de cursos */
 .courses-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex;  /* Usamos flexbox para organizar las tarjetas */
+    flex-wrap: wrap;  /* Permite que las tarjetas se ajusten */
+    gap: 20px;  /* Espaciado entre las tarjetas */
 }
 
 .course-card {
-    background-color: #e0f7fa;
-    /* Fondo claro */
-    border: 1px solid #0288d1;
-    /* Borde azul */
-    border-radius: 10px;
-    width: 30%;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa;  /* Fondo azul claro */
+    transition: background 0.3s ease, transform 0.3s ease;  /* Transiciones suaves */
+    border: 1px solid #0288d1;  /* Borde azul */
+    border-radius: 10px;  /* Bordes redondeados */
+    width: 30%;  /* Ancho del 30% para cada tarjeta */
+    padding: 15px;  /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta de curso */
+.course-card:hover {
+    background-image: linear-gradient(135deg, #6a11cb, #2575fc);  /* Degradado de color */
+    cursor: pointer;  /* Cambia el cursor a mano para indicar que es interactivo */
+    transform: scale(1.05);  /* Aumenta ligeramente el tamaño de la tarjeta */
+}
+
+/* Cambiar el color del texto en el encabezado y la descripción al pasar el mouse */
+.course-card:hover h3,
+.course-card:hover p {
+    color: white;  /* Cambia el color del texto a blanco */
+}
+
+/* Para evitar que el texto se vuelva difícil de leer */
+.course-card h3,
+.course-card p {
+    transition: color 0.3s ease;  /* Transición suave al cambiar el color */
 }
 
 .course-card h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #01579b;
-    /* Azul fuerte */
+    margin-bottom: 10px;  /* Espacio inferior */
+    font-size: 20px;  /* Tamaño de fuente para el título */
+    color: #01579b;  /* Color azul oscuro */
 }
 
 /* Formularios */
 form {
-    display: grid;
-    gap: 15px;
+    display: grid;  /* Usamos grid para los formularios */
+    gap: 15px;  /* Espaciado entre los elementos */
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
+    display: flex;  /* Usamos flexbox para cada campo */
+    flex-direction: column;  /* Alinea los campos en columna */
 }
 
 form label {
-    font-size: 16px;
-    color: #444;
+    font-size: 16px;  /* Tamaño de texto para las etiquetas */
+    color: #444;  /* Color de las etiquetas */
 }
 
 form input,
 form textarea,
 form select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 10px;  /* Espaciado interno */
+    font-size: 16px;  /* Tamaño de texto */
+    border: 1px solid #ddd;  /* Borde suave */
+    border-radius: 5px;  /* Bordes redondeados */
 }
 
 /* Estilo para botones */
 button {
-    background-color: #4caf50;
-    /* Verde */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #4caf50;  /* Fondo verde */
+    color: #fff;  /* Texto blanco */
+    border: none;  /* Sin borde */
+    border-radius: 5px;  /* Bordes redondeados */
+    padding: 10px 15px;  /* Espaciado interno */
+    font-size: 16px;  /* Tamaño de texto */
+    cursor: pointer;  /* Cursor de mano */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Transiciones suaves */
 }
 
 button:hover {
-    background-color: #45a049;
-    /* Un tono de verde más oscuro */
-    transform: scale(1.05);
-    /* Efecto de aumento */
+    background-color: #45a049;  /* Verde más oscuro */
+    transform: scale(1.05);  /* Efecto de aumento */
 }
 
 /* Estilo específico para botones de detalles */
 .details-button {
-    background-color: #2196f3;
-    /* Azul */
+    background-color: #2196f3;  /* Fondo azul */
 }
 
 .details-button:hover {
-    background-color: #1976d2;
-    /* Un tono de azul más oscuro */
+    background-color: #1976d2;  /* Azul más oscuro */
 }
 
 /* Estilo para el botón de agregar curso */
 #add-course-form button {
-    background-color: #ff9800;
-    /* Naranja */
+    background-color: #ff9800;  /* Fondo naranja */
 }
 
 #add-course-form button:hover {
-    background-color: #fb8c00;
-    /* Un tono de naranja más oscuro */
+    background-color: #fb8c00;  /* Naranja más oscuro */
 }
-
-
 
 /* Estilos para inputs */
 input,
 textarea,
 select {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    /* Borde por defecto */
-    border-radius: 5px;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;  /* Espaciado interno */
+    font-size: 16px;  /* Tamaño de texto */
+    border: 2px solid #ddd;  /* Borde por defecto */
+    border-radius: 5px;  /* Bordes redondeados */
+    transition: border-color 0.3s ease, background-color 0.3s ease;  /* Transiciones suaves */
 }
 
 /* Efecto al pasar el mouse sobre inputs */
 input:hover,
 textarea:hover,
 select:hover {
-    border-color: #2563eb;
-    /* Azul más claro al pasar el mouse */
+    border-color: #2563eb;  /* Azul claro al pasar el mouse */
 }
 
 /* Color estable al hacer clic */
 input:focus,
 textarea:focus,
 select:focus {
-    background-color: #e3f2fd;
-    /* Color claro al enfocar */
-    border-color: #1e3a8a;
-    /* Azul oscuro al enfocar */
+    background-color: #e3f2fd;  /* Fondo claro al enfocar */
+    border-color: #1e3a8a;  /* Azul oscuro al enfocar */
 }
 
 /* Animación de temblor */
@@ -242,40 +236,20 @@ select:focus {
 
 /* Efecto de temblor cuando se aplica la clase */
 .shake {
-    animation: shake 0.5s ease forwards;
-    /* Efecto de temblor al escribir */
+    animation: shake 0.5s ease forwards;  /* Efecto de temblor al escribir */
 }
 
 /* Para inputs vacíos después de haber sido enfocados */
 input:invalid,
 textarea:invalid {
-    border-color: #ff5722;
-    /* Color de advertencia si está vacío */
+    border-color: #ff5722;  /* Color de advertencia si está vacío */
 }
 
 /* Pie de página */
 footer {
     background-color: #1e3a8a;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .courses-list {
-        flex-direction: row;
-
-    }
-
-    .course-card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul li a {
-        padding: 8px 10px;
-        font-size: 16px;
-    }
+    color: #fff;  /* Texto blanco */
+    text-align: center;  /* Centra el texto */
+    padding: 20px;  /* Espaciado */
+    margin-top: 30px;  /* Espacio superior */
 }
